@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376565868175",
+    "project_id": "juego-wiinie-pooh",
+    "storage_bucket": "juego-wiinie-pooh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376565868175:android:048f469ce3d723ba33b2fa",
+        "android_client_info": {
+          "package_name": "com.example.juegowoniiepooh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376565868175-kjk562ufvo05tlf4aad8gbkq0mrs4ujm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOjuKd8KeVb1-8KxYjQmT8ML8doDvGZiQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376565868175-kjk562ufvo05tlf4aad8gbkq0mrs4ujm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
