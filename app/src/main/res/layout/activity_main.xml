@@ -22,7 +22,7 @@
             android:background="@drawable/boton_personalizado"
             app:backgroundTint ="@null"
             android:textSize="18dp"
-            android:textColor="@color/black"
+            android:textColor="@color/color_botones_text"
             android:text="Login" />
 
         <Button
@@ -32,7 +32,7 @@
             android:background="@drawable/boton_personalizado"
             app:backgroundTint ="@null"
             android:textSize="18dp"
-            android:textColor="@color/black"
+            android:textColor="@color/color_botones_text"
             android:text="Registro"
             />
     </LinearLayout>

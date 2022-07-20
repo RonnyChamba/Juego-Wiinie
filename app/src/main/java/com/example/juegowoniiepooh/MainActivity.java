@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnRegistro.setTypeface(typeface);
 
         btnLogin.setOnClickListener( (event) -> {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, Login.class);
             startActivity(intent);
         });
 
