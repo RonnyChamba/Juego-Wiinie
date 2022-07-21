@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:text="@string/hasMatadoTxt"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginBottom="10dp"
         android:textAlignment="center"
@@ -57,18 +58,20 @@
         app:lottie_loop="true"/>
         <Button
             android:id="@+id/jugarDeNuevo"
-            android:layout_width="300dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:text="@string/jugarDeNuevo"
             android:layout_marginTop="15dp"
             android:textSize="@dimen/btnFontSize"
             app:backgroundTint ="@null"
+            android:textColor="@color/color_fondo"
             android:layout_gravity="center"
             android:background="@drawable/boton_personalizado"/>
 
         <Button
             android:id="@+id/irMenu"
-            android:layout_width="300dp"
+            android:layout_width="280dp"
+            android:textColor="@color/color_fondo"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="@string/irMenu"
@@ -79,7 +82,8 @@
 
         <Button
             android:id="@+id/puntajes"
-            android:layout_width="300dp"
+            android:layout_width="280dp"
+            android:textColor="@color/color_fondo"
             android:layout_height="wrap_content"
             android:text="@string/puntajes"
             android:layout_marginTop="15dp"

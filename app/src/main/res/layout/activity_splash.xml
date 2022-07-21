@@ -20,6 +20,7 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/foto_3_zombie"/>
         <TextView
+            android:id="@+id/txTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"

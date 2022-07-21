@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -26,6 +29,7 @@ public class Menu extends AppCompatActivity {
     TextView tvTitulo , tvUid, tvZombie, tvSubTitulo, tvCorreo, tvNombre;
     FirebaseDatabase database;
     DatabaseReference jugadores;
+    ImageView imagen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +45,7 @@ public class Menu extends AppCompatActivity {
         btnAcercaDe = findViewById(R.id.btnHacerca);
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
 
+        imagen = findViewById(R.id.imageGif);
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         database = FirebaseDatabase.getInstance();
@@ -75,6 +80,10 @@ public class Menu extends AppCompatActivity {
         tvZombie.setTypeface(fuentes);
         tvSubTitulo.setTypeface(fuentes);
         tvCorreo.setTypeface(fuentes);
+
+        String url = "https://i.pinimg.com/originals/16/84/4e/16844ef7cc93fd3c7a608aefae306ac1.gif";
+        Uri urlParse = Uri.parse(url);
+        Glide.with(getApplicationContext()).load(urlParse).into(imagen);
     }
     @Override
     protected void onStart() {
