@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +36,11 @@ public class Registro extends AppCompatActivity {
     FirebaseAuth auth;
     TextView txtFecha, tvTitulo;
 
+
+    private TextView txtEdad;
+    private Spinner txtPais;
+    private ProgressDialog progressDialog;
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +54,10 @@ public class Registro extends AppCompatActivity {
         tvPassword = findViewById(R.id.txtPassword);
         txtFecha = findViewById(R.id.txtFecha);
         btnRegistrar = findViewById(R.id.btnRegistrar);
+
+        txtEdad = findViewById(R.id.txtEdad);
+        txtPais = findViewById(R.id.txtPais);
+
 
         auth = FirebaseAuth.getInstance();
         Date date = new Date();
@@ -80,7 +91,17 @@ public class Registro extends AppCompatActivity {
 
     }
 
+    private void savePlayer() {
+
+        progressDialog = new ProgressDialog(Registro.this);
+        progressDialog.setTitle("Registrando Jugador, espere por favor");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+
+    }
     private void registrarJugador(String email, String password){
+
+        savePlayer();
 
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -88,6 +109,7 @@ public class Registro extends AppCompatActivity {
 
                 if (task.isSuccessful()){
 
+                    progressDialog.dismiss();
                     FirebaseUser user = auth.getCurrentUser();
                     int contador = 0;
                     assert  user !=null;
@@ -97,6 +119,10 @@ public class Registro extends AppCompatActivity {
                     String fechaString = txtFecha.getText().toString();
                     String emailString = tvEmail.getText().toString();
                     String passwordString = tvPassword.getText().toString();
+
+                    String edad = txtEdad.getText().toString();
+                    String pais = txtPais.getSelectedItem().toString();
+
                     Map<Object, Object> datosJugador = new HashMap<>();
                     datosJugador.put("Uid", uidString);
                     datosJugador.put("Email", emailString);
@@ -104,6 +130,10 @@ public class Registro extends AppCompatActivity {
                     datosJugador.put("Nombres", nombreString);
                     datosJugador.put("Fecha", fechaString);
                     datosJugador.put("Zombies", contador);
+
+                    datosJugador.put("Edad", edad);
+                    datosJugador.put("Imagen", "");
+                    datosJugador.put("Pais", pais);
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
@@ -120,6 +150,7 @@ public class Registro extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();
                 Toast.makeText(Registro.this, e.getMessage(), Toast.LENGTH_LONG).show();
 
             }
