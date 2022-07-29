@@ -58,8 +58,6 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment {
         jugarDeNuevo.setOnClickListener((vi) -> {
 
            this.dismiss();
-            //startActivity( new Intent( getContext(),EscenarioJuego.class ));
-
         });
 
         irMenu.setOnClickListener( (vi) ->{
@@ -67,7 +65,7 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment {
             startActivity( new Intent( getContext(),Menu.class ));
         });
         puntajes.setOnClickListener( (vi) ->{
-           // startActivity( new Intent(   getContext(), Puntajes.class));
+            startActivity( new Intent(   getContext(), Puntajes.class));
         });
         numeroTxt.setText(zombies);
         seAcaboTxt.setTypeface(typeface);

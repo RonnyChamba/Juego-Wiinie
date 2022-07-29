@@ -141,7 +141,7 @@ public class Menu extends AppCompatActivity {
         });
         btnPuntuacion.setOnClickListener((event) -> {
 
-           // startActivity( new Intent(this, Puntajes.class));
+           startActivity( new Intent(this, Puntajes.class));
         });
         btnAcercaDe.setOnClickListener((event) -> {
             openDialogAbouth();
@@ -157,7 +157,7 @@ public class Menu extends AppCompatActivity {
         } );
 
         btnCambiasPass.setOnClickListener( (event) ->{
-          //  startActivity( new Intent(Menu.this, CambioPassword.class));
+           startActivity( new Intent(Menu.this,  CmabioPassword.class));
         });
 
         Typeface typeface = Typeface.createFromAsset(Menu.this.getAssets(), "fuentes/zombie.TTF");
@@ -197,16 +197,16 @@ public class Menu extends AppCompatActivity {
 
     private void openDialogAbouth() {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        //DialogFragmentAcerca dialog = new DialogFragmentAcerca();
-        //dialog.setCancelable(false);
+        DialogFragmentAcerca dialog = new DialogFragmentAcerca();
+        dialog.setCancelable(false);
 
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         // For a little polish, specify a transition animation
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         // To make it fullscreen, use the 'content' root view as the container
         // for the fragment, which is always the root view for the activity
-        //transaction.add(android.R.id.content, dialog)
-          //      .addToBackStack(null).commit();
+        transaction.add(android.R.id.content, dialog)
+                .addToBackStack(null).commit();
     }
     private void editarDatos() {
 
