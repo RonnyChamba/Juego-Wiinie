@@ -83,9 +83,9 @@ public class Adaptador extends  RecyclerView.Adapter<Adaptador.MyHolder>{
         // Click sobre la filla del jugador
         holder.itemView.setOnClickListener( (even) ->{
 
-            /*Intent intent = new Intent(context, DetalleJugador.class);
+            Intent intent = new Intent(context, DetalleJugador.class);
             intent.putExtra("jugadorClick", jugadorTemp);
-            context.startActivity(intent);*/
+            context.startActivity(intent);
 
         });
 

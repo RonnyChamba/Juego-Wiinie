@@ -81,7 +81,7 @@ public class DialogFragment extends androidx.fragment.app.DialogFragment {
     private void onloadGif(View view){
 
         imagen = view.findViewById(R.id.imageGif);
-        String url = "https://i.imgur.com/lMHQTjI.gif";
+        String url = "https://i.pinimg.com/originals/16/84/4e/16844ef7cc93fd3c7a608aefae306ac1.gif";
         Uri urlParse = Uri.parse(url);
         Glide.with(view.getContext()).load(urlParse).into(imagen);
     }
