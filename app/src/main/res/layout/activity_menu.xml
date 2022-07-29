@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu"
-    android:background="@color/color_fondo"
+    android:background="@drawable/img_menu_animado"
     android:padding="10dp">
 
     <LinearLayout
@@ -24,10 +24,12 @@
             <TextView
                 android:id="@+id/txtTitlePerfil"
                 android:layout_width="match_parent"
+                android:padding="4dp"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:textSize="@dimen/sizeTitle"
                 android:textStyle="bold"
+                android:background="@color/color_fondo"
                 android:textColor="@color/color_botones"
                 android:text="@string/txtTitlePerfil"/>
 
@@ -54,7 +56,7 @@
             </LinearLayout>
             <TextView
                 android:id="@+id/txtCorreoJugadorMenu"
-                android:textColor="@color/white"
+                android:textColor="@color/color_fondo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -66,7 +68,7 @@
             <TextView
                 android:id="@+id/txtNombreMenu"
                 android:layout_width="match_parent"
-                android:textColor="@color/white"
+                android:textColor="@color/color_fondo"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:textSize="16dp"
@@ -82,7 +84,7 @@
                 android:textStyle="bold"
                 android:textSize="15dp"
                 android:layout_marginBottom="@dimen/mg_tb"
-                android:textColor="@color/white"
+                android:textColor="@color/color_fondo"
                 android:text=""/>
             <TextView
                 android:id="@+id/txtPaisMenu"
@@ -91,7 +93,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="15dp"
-                android:textColor="@color/white"
+                android:textColor="@color/color_fondo"
                 android:layout_marginBottom="@dimen/mg_tb"
                 android:text=""/>
 
@@ -103,7 +105,7 @@
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textSize="15dp"
-                android:textColor="@color/white"
+                android:textColor="@color/color_fondo"
                 android:text=""/>
         </LinearLayout>
 
@@ -125,6 +127,8 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/sizeTitle"
                 android:textStyle="bold"
+                android:padding="4dp"
+                android:background="@color/color_fondo"
                 android:layout_marginBottom="@dimen/mg_tb"
                 android:textColor="@color/color_botones"
                 android:text="@string/txtTitleMenu"/>
@@ -175,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@color/color_botones"
+                android:textColor="@color/color_fondo"
                 android:textSize="@dimen/sizeTitle"
                 android:text="@string/txtSubTitleMenu"
                 android:layout_marginBottom="10dp"/>
@@ -189,6 +193,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btnJugarMenu"
                 android:textSize="18dp"
+                android:textColor="@color/color_fondo"
                 android:layout_marginBottom="@dimen/mg_tb"
                 />
 
@@ -200,8 +205,8 @@
                 android:background="@drawable/boton_personalizado"
                 app:backgroundTint ="@null"
                 android:textSize="@dimen/btnFontSize"
-                android:textColor="@color/white"
                 android:textStyle="bold"
+                android:textColor="@color/color_fondo"
                 android:layout_marginBottom="@dimen/mg_tb"/>
 
             <Button
@@ -212,7 +217,7 @@
                 android:background="@drawable/boton_personalizado"
                 app:backgroundTint ="@null"
                 android:textSize="@dimen/btnFontSize"
-                android:textColor="@color/white"
+                android:textColor="@color/color_fondo"
                 android:textStyle="bold"
                 android:layout_marginBottom="@dimen/mg_tb"/>
 
@@ -223,6 +228,7 @@
                 android:text="@string/btnAcercaMenu"
                 android:background="@drawable/boton_personalizado"
                 app:backgroundTint ="@null"
+                android:textColor="@color/color_fondo"
                 android:textSize="18dp"
                 android:layout_marginBottom="@dimen/mg_tb"/>
 
@@ -234,6 +240,7 @@
                 android:background="@drawable/boton_personalizado"
                 app:backgroundTint ="@null"
                 android:textSize="18dp"
+                android:textColor="@color/color_fondo"
                 android:layout_marginBottom="@dimen/mg_tb"/>
 
             <Button
@@ -241,6 +248,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/btnSalirMenu"
+                android:textColor="@color/color_fondo"
                 android:textSize="18dp"
                 android:background="@drawable/boton_personalizado"
                 app:backgroundTint ="@null"/>

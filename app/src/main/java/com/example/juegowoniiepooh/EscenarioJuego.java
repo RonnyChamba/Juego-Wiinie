@@ -82,10 +82,10 @@ public class EscenarioJuego extends AppCompatActivity {
             if (!gameOver) {
                 contador++;
                 txtContador.setText(String.valueOf(contador));
-                imgZombie.setImageResource(R.drawable.foto_3_zombie);
+                imgZombie.setImageResource(R.drawable.img_atrapado_2);
                 new Handler().postDelayed((() -> {
                     movimiento();
-                    imgZombie.setImageResource(R.drawable.foto_3);
+                    imgZombie.setImageResource(R.drawable.foto_2);
                 }), 500);
             }else Toast.makeText(this, "Inicie un nuevo juego", Toast.LENGTH_SHORT).show();
         });
@@ -143,8 +143,6 @@ public class EscenarioJuego extends AppCompatActivity {
         // for the fragment, which is always the root view for the activity
         transaction.add(android.R.id.content, dialog)
                 .addToBackStack(null).commit();
-
-        Toast.makeText(this, "ofhffh", Toast.LENGTH_SHORT).show();
     }
 
     private  void updateDataPlayer(){

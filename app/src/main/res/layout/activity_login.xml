@@ -36,7 +36,7 @@
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginBottom="15dp"
-                app:srcCompat="@drawable/foto_3_zombie" />
+                app:srcCompat="@drawable/img_atrapado_2" />
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout

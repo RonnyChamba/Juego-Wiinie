@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_fondo"
+    android:background="@drawable/bosque"
     tools:context=".Splash"
     android:orientation="vertical"
     android:gravity="center">
@@ -16,17 +16,20 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/foto_3_zombie"/>
+            android:layout_height="250dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/foto_1"/>
         <TextView
             android:id="@+id/txTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:padding="4dp"
             android:textSize="30sp"
+            android:layout_marginBottom="10dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:background="@color/color_fondo"
+            android:textColor="@color/color_botones"
             android:text="Atrapando Pooh"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -36,6 +39,7 @@
             android:textAlignment="center"
             app:lottie_autoPlay="true"
             app:lottie_fileName="cargando.json"
+            app:lottie_colorFilter="@color/color_fondo"
             app:lottie_imageAssetsFolder="assets"
             app:lottie_loop="true" />
     </LinearLayout>

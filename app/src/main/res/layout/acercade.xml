@@ -138,7 +138,7 @@
             android:text="OK"
             android:textStyle="bold"
             android:backgroundTint="@color/color_fondo"
-            android:textColor="@color/black"
+            android:textColor="@color/color_botones"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
