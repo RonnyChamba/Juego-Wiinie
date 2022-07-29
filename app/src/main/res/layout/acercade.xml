@@ -36,7 +36,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/default_perfil"
+                    android:src="@drawable/perfil_yadira"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
@@ -88,7 +88,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/default_perfil"
+                    android:src="@drawable/perfil_genith"
                     android:layout_marginBottom="10dp"/>
 
                 <TextView
